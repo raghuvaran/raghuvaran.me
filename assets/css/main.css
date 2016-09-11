@@ -3012,7 +3012,7 @@
 		-webkit-flex-direction: row;
 		-ms-flex-direction: row;
 		flex-direction: row;
-		min-height: 22.5em;
+		min-height: 1em;
 	}
 
 		body.is-ie .spotlights > section {
@@ -3067,7 +3067,7 @@
 			-ms-flex: 1;
 		}		
 		.spotlights > section > .expcontent {
-			padding: 4em 5em 2em 5em ;
+			padding: 4em 2em 2em 2em ;
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: -ms-flex;
@@ -3079,8 +3079,8 @@
 			-moz-justify-content: center;
 			-webkit-justify-content: center;
 			-ms-justify-content: center;
-			justify-content: center;
-			width: 5em;
+			justify-content: top;
+			width: 12em;
 			-ms-flex: 1;
 		}
 
@@ -3119,10 +3119,10 @@
 		@media screen and (max-width: 1680px) {
 
 			.spotlights > section > .content {
-				padding: 4em 4em 2em 4em ;
+				padding: 1em 4em 0em 2em ;
 			}
 			.spotlights > section > .expcontent {
-				padding: 4em 4em 2em 4em ;
+				padding: 1.5em 0em 2em 2em ;
 			}
 
 		}
@@ -3140,9 +3140,11 @@
 
 				.spotlights > section > .content {
 					width: 100%;
+					padding: 1em 4em 0em 4em ;
 				}
 				.spotlights > section > .expcontent {
 					width: 100%;
+					padding: 2em 0em 0em 2em ;
 				}
 
 				.spotlights > section.inactive > .content > .inner, body.is-loading .spotlights > section > .content > .inner {
@@ -3162,10 +3164,10 @@
 			}
 
 			.spotlights > section > .content {
-				padding: 3em 2em 1em 2em ;
+				padding: 1em 2em 0em 2em ;
 			}
 			.spotlights > section > .expcontent {
-				padding: 3em 2em 1em 2em ;
+				padding: 3em 2em 0em 1em ;
 			}
 
 		}
