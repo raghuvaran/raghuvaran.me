@@ -221,6 +221,11 @@ $(function(){
 				
 	})
 
+	$(".icons").find(".fa-github").attr("href","https://github.com/rchowda");
+	$(".icons").find(".fa-twitter").attr("href","https://twitter.com/ch_raghuvaran");
+	$(".icons").find(".fa-envelope").attr("href","mailto:iamraghu@raghuvaran.me");
+	$(".icons").find(".fa-linkedin").attr("href","https://www.linkedin.com/in/chraghuvaran");
+
 
 	
 })
