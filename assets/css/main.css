@@ -1610,7 +1610,7 @@
 	}
 
 	body {
-		-ms-overflow-style: -ms-autohiding-scrollbar;
+		-ms-overflow-style: none;
 	}
 
 	@media screen and (max-width: 480px) {
