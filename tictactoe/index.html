@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="description" content="Try crashing it if you can!">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" type="image/png" href="https://people.cs.clemson.edu/~rchowda/images/android-desktop.png"/>
+
+      <title>Tic-Tac-Toe Game</title>
+      <!-- Bootstrap -->
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+  <div id="table">
+      <div id ="1" class="col-md-4">&nbsp;</div>
+      <div id ="2" class="col-md-4">&nbsp;</div>
+      <div id ="3" class="col-md-4">&nbsp;</div>
+      <div id ="4" class="col-md-4">&nbsp;</div>
+      <div id ="5" class="col-md-4">&nbsp;</div>
+      <div id ="6" class="col-md-4">&nbsp;</div>
+      <div id ="7" class="col-md-4">&nbsp;</div>
+      <div id ="8" class="col-md-4">&nbsp;</div>
+      <div id ="9" class="col-md-4">&nbsp;</div>
+  </div>
+  <div class="form-group col-md-4" id="playerSel1">
+      <label for="sel1">Select Player 1:</label>
+      <select class="form-control" id="sel1">
+          <option>--Select--</option>
+          <!--Player info goes here-->
+      </select>
+
+      <label for="usr1">Name:</label>
+      <input type="text" class="form-control" id="usr1">
+      <label for="mrkr1">Marker:</label>
+      <input type="text" class="form-control" id="mrkr1">
+      <h6><b>NOTE:</b> Existing marker is preferred over the new if 'Name' already exists</h6>
+      <button type="button" class="btn btn-default" id="btn1">Done</button>
+  </div>
+
+  <div class="form-group col-md-4" id="playerSel2">
+          <label for="sel2">Select Player 2:</label>
+          <select class="form-control" id="sel2">
+              <option>--Select--</option>
+              <!--Player info goes here-->
+          </select>
+      <label for="usr2">Name:</label>
+      <input type="text" class="form-control" id="usr2">
+      <label for="mrkr2">Marker:</label>
+      <input type="text" class="form-control" id="mrkr2">
+      <h6><b>NOTE:</b> Existing marker is preferred over the new if 'Name' already exists</h6>
+          <button type="button" class="btn btn-default" id="btn2">Done</button>
+  </div>
+<div id="leaderBoard col-md-4" class="scores p1">
+<p class="player1"><span id="p1_n" class="p1">Player 1</span><span class="p2">Player 1</span> <span id="p1_m" class="score">x</span></p>
+<p class="player2"><span id="p2_n" class="p1">Player 2</span><span class="p2">Player 2</span> <span id="p2_m" class="score">o</span></p>
+<div class="result done" id="result"><p>Result<span id="winner" class="score">&nbsp;Player1</span></p></div>
+</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<!-- <script src="js/jquery-1.11.3.min.js"></script>-->
+
+	<!-- Include all compiled plugins (below), or include individual files as needed --> 
+	<!--<script src="js/bootstrap.js"></script>-->
+    <script src="js/script.js"></script>
+  </body>
+</html>
