@@ -1,5 +1,7 @@
 RewriteEngine on
 RewriteCond %{HTTPS} !=on [NC]
-RewriteCond %{HTTP_HOST} ^raghuvaran.me [NC,OR]
-RewriteCond %{HTTP_HOST} ^www.raghuvaran.me [NC]
+RewriteCond %{HTTP_HOST} ^raghuvaran\.me [NC,OR]
+RewriteCond %{HTTP_HOST} ^www\.raghuvaran\.me [NC]
 RewriteRule ^(.*)$ https://raghuvaran.me/$1 [L,R=301,NC]
+	
+Redirect 301 /notepad https://people.cs.clemson.edu/~rchowda/notepad/
