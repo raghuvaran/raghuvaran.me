@@ -6,10 +6,10 @@ Desc:   Implementing jBox modules
 
 $(document).ready(function(){
 
-new jBox('Notice', {
-    content: 'Glad to see you!',
-    color: 'blue'
-});
+// new jBox('Notice', {
+//     content: 'Glad to see you!',
+//     color: 'blue'
+// });
 
 });
 
