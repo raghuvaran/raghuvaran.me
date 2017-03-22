@@ -3,6 +3,60 @@ Author: Raghuvaran Chowda
 Date:   March 21, 2017
 Desc:   Implementing jBox modules
 */
+var popups = { 0:
+				{
+			   		"title" : "Feel free to look around my portfolio",
+			   		animation: {open: 'move:right', close: 'slide:right'},
+			    	"position1" : {
+			    		'x' : "right",
+			    		'y' : "top"
+			    	}
+			   }
+				,
+			   1:
+			   {
+			   		"title" : "Well, you can ping me here",
+			   		animation: {open: 'tada', close: 'flip'},
+			    	"position" : {
+			    		'x' : "right",
+			    		'y' : "bottom"
+			    	},
+			    	offset:{y:-100}
+			   },
+			   2:
+			    {
+			    	"title" : "It looks like you need help!",
+			    	animation: {open: 'flip', close: 'slide:top'},
+			    	"position1" : {
+			    		'x' : "right",
+			    		'y' : "top"
+			    	}
+			    },
+			   3:
+			   { 
+					"title" : "Glad to see you!",
+					animation: {open: 'flip', close: 'slide:right'},
+			    	"position1" : {
+			    		'x' : "right",
+			    		'y' : "top"
+			    	}
+				}
+			   
+			};
+
+function popup(obj , i){
+	console.log(obj, i);
+	new jBox('Notice', {
+    content: obj[i].title,
+    position: obj[i].position,
+    animation: obj[i].animation,
+    offset: obj[i].offset,
+    color: 'blue'
+});	
+	if(i > 0) setTimeout(function(){
+									popup(obj, i-1);
+									}, 6500);
+}
 
 $(document).ready(function(){
 
@@ -10,6 +64,9 @@ $(document).ready(function(){
 //     content: 'Glad to see you!',
 //     color: 'blue'
 // });
+setTimeout(function(){
+popup(popups, 3);
+}, 2500);
 
 });
 
