@@ -1,4 +1,20 @@
 /*
+Author: Raghuvaran Chowda
+Date:   March 21, 2017
+Desc:   Implementing jBox modules
+*/
+
+$(document).ready(function(){
+
+new jBox('Notice', {
+    content: 'Glad to see you!',
+    color: 'blue'
+});
+
+});
+
+
+/*
 	Hyperspace by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
