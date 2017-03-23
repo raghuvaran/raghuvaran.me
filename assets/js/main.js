@@ -45,7 +45,6 @@ var popups = { 0:
 			};
 
 function popup(obj , i){
-	console.log(obj, i);
 	new jBox('Notice', {
     content: obj[i].title,
     position: obj[i].position,
