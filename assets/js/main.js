@@ -33,7 +33,7 @@ var popups = { 0:
 			    	}
 			    },
 			   3:
-			   { 
+			   {
 					"title" : "Glad to see you!",
 					animation: {open: 'flip', close: 'slide:right'},
 			    	"position1" : {
@@ -41,8 +41,21 @@ var popups = { 0:
 			    		'y' : "top"
 			    	}
 				}
-			   
+
 			};
+
+$(document).ready(function(){
+
+	setTimeout(function(){
+		wobble("titleName");
+	}, 4000);
+
+	setTimeout(function(){
+		popup(popups, 3);
+	}, 2500);
+
+});
+
 
 function popup(obj , i){
 	new jBox('Notice', {
@@ -51,23 +64,42 @@ function popup(obj , i){
     animation: obj[i].animation,
     offset: obj[i].offset,
     color: 'blue'
-});	
+});
 	if(i > 0) setTimeout(function(){
 									popup(obj, i-1);
 									}, 6500);
 }
 
-$(document).ready(function(){
 
-// new jBox('Notice', {
-//     content: 'Glad to see you!',
-//     color: 'blue'
-// });
-setTimeout(function(){
-popup(popups, 3);
-}, 2500);
+/*
+	Animate title; Legacy code
+	Intially written for https://people.cs.clemson.edu/~rchowda/
+*/
 
-});
+function wobble(id){
+var str = document.getElementById(id).innerHTML;
+var timerID = 0, counter = 0;
+
+timerID = setInterval(function(){randm(str,id)},100);
+
+
+function randm(y,z){
+counter = counter + 1;
+    var a = y.split("");
+        n = a.length;
+
+    for(var i = n - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+    }
+    document.getElementById(z).innerHTML = a.join("");
+	if (counter>8)	{
+					document.getElementById(z).innerHTML= str;
+					clearInterval(timerID);}
+}
+}
 
 
 /*
@@ -290,7 +322,7 @@ $(function(){
 		event.preventDefault();
 		$(this).parent().find(".more_text").show();
 		$(this).hide();
-				
+
 	})
 
 	$(".icons").find(".fa-github").attr("href","https://github.com/rchowda");
@@ -299,5 +331,5 @@ $(function(){
 	$(".icons").find(".fa-linkedin").attr("href","https://www.linkedin.com/in/chraghuvaran");
 
 
-	
+
 })
